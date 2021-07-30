@@ -12,6 +12,24 @@ export default new Vuex.Store({
     activePage: 1,
     projects: [
       {
+        frontTitle: "BonVayage",
+        image: require("./assets/images/bonvayage.png"),
+        frontContent:
+          "Compare different travel destinations and find out which one best fits your budget. Search two different destinations and get an estimate on what your minimum total cost would be with flight and room.",
+        liveURL: "https://bon-voyage-capstone.herokuapp.com/",
+        gitURL: "https://github.com/Capstone-Bi-Coastal-Visualizers/data-visualization",
+        languages: ["React", "Redux", "Node", "Express", "Bulma", "Heroku", "Chart JS", "Fuse JS"],
+      },
+      {
+        frontTitle: "Instaprove",
+        image: require("./assets/images/instaprove.png"),
+        frontContent:
+          "Start your marketing efforts with learning what your competitors are doing. Enter your domain and instantly learn how to improve your marketing efforts with competitor data.",
+        liveURL: "https://bon-voyage-capstone.herokuapp.com/",
+        gitURL: "https://github.com/Capstone-Bi-Coastal-Visualizers/data-visualization",
+        languages: ["Vue JS", "Vuex", "Node", "Puppeteer", "AWS Amplify", "AWS S3"],
+      },
+      {
         frontTitle: "Angular Quiz",
         image: require("./assets/images/angular-quiz.png"),
         frontContent:
