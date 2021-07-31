@@ -17,26 +17,27 @@ export default new Vuex.Store({
         frontContent:
           "Compare different travel destinations and find out which one best fits your budget. Search two different destinations and get an estimate on what your minimum total cost would be with flight and room.",
         liveURL: "https://bon-voyage-capstone.herokuapp.com/",
-        gitURL: "https://github.com/Capstone-Bi-Coastal-Visualizers/data-visualization",
-        languages: ["React", "Redux", "Node", "Express", "Bulma", "Heroku", "Chart JS", "Fuse JS"],
+        gitURL:
+          "https://github.com/Capstone-Bi-Coastal-Visualizers/data-visualization",
+        languages: [
+          "React",
+          "Redux",
+          "Node",
+          "Express",
+          "Bulma",
+          "Heroku",
+          "Chart JS",
+          "Fuse JS",
+        ],
       },
       {
         frontTitle: "Instaprove",
         image: require("./assets/images/instaprove.png"),
         frontContent:
           "Start your marketing efforts with learning what your competitors are doing. Enter your domain and instantly learn how to improve your marketing efforts with competitor data.",
-        liveURL: "https://bon-voyage-capstone.herokuapp.com/",
-        gitURL: "https://github.com/Capstone-Bi-Coastal-Visualizers/data-visualization",
-        languages: ["Vue JS", "Vuex", "Node", "Puppeteer", "AWS Amplify", "AWS S3"],
-      },
-      {
-        frontTitle: "Angular Quiz",
-        image: require("./assets/images/angular-quiz.png"),
-        frontContent:
-          "I woke up one day and realized I knew nothing about turtles. Decided to build a quiz that will help me learn some turtle facts. Angular JS seemed like the cool thing to do at the time.",
-        liveURL: "https://vigorous-poincare-7385ea.netlify.com/",
-        gitURL: "https://github.com/LFRod4/Angular-JS-Quiz",
-        languages: ["Jade", "Bulma", "Javascript", "Angular JS", "Netifly"],
+        liveURL: "https://instaprove-react.herokuapp.com/",
+        gitURL: "https://github.com/LFRod4/instaprove-react",
+        languages: ["React", "Redux", "Node", "Puppeteer", "Heroku"],
       },
       {
         frontTitle: "CRM Serverless",
@@ -44,15 +45,15 @@ export default new Vuex.Store({
         frontContent:
           "Lead management tool with a full serverless backend setup. Vue JS frontend and full a variety of Amazon Web Services for backend. Test account set up with MongoDB set up already.",
         gitURL: "https://github.com/LFRod4/bradynce-crm",
-        liveURL:
-          "http://frontend-20200527233516-hostingbucket-env.s3-website-us-west-2.amazonaws.com/",
+        liveURL: "",
         languages: [
-          "VueJS",
+          "Vue",
           "Vue Router",
           "Vuex",
-          "NodeJS",
+          "Node",
           "MongoDB",
           "Amazon S3",
+          "AWS",
           "AWS Lambda",
           "AWS API Gateway",
           "Amazon Cognito",
@@ -68,15 +69,23 @@ export default new Vuex.Store({
         liveURL: "https://vimeo.com/417472997",
         gitURL: "https://github.com/LFRod4/vue-django",
         languages: [
-          "Bulma",
-          "Javascript",
-          "VueJS",
+          "Vue",
           "Vue Router",
           "Vuex",
           "Python",
           "Django",
           "SQLite",
+          "Bulma",
         ],
+      },
+      {
+        frontTitle: "Angular Quiz",
+        image: require("./assets/images/angular-quiz.png"),
+        frontContent:
+          "I woke up one day and realized I knew nothing about turtles. Decided to build a quiz that will help me learn some turtle facts. Angular JS seemed like the cool thing to do at the time.",
+        liveURL: "https://vigorous-poincare-7385ea.netlify.com/",
+        gitURL: "https://github.com/LFRod4/Angular-JS-Quiz",
+        languages: ["Angular", "Jade", "Bulma", "Netifly"],
       },
       {
         frontTitle: "Skags Generator",
@@ -89,7 +98,7 @@ export default new Vuex.Store({
           "Bootstrap",
           "Bulma",
           "Javascript",
-          "VueJS",
+          "Vue",
           "Vue Router",
           "Vuex",
           "Vue CLI",
@@ -104,7 +113,7 @@ export default new Vuex.Store({
           "I used this small project to learn how to get around the basics of creating a REST API. Currently working on building the client side of this project.",
         gitURL: "https://github.com/LFRod4/node-shop",
         languages: [
-          "Node JS",
+          "Node",
           "Mongoosedb Atlas",
           "Express",
           "Body Parser",
@@ -123,7 +132,7 @@ export default new Vuex.Store({
         gitURL: "https://github.com/LFRod4/PPCTools",
         languages: [
           "Bulma",
-          "VueJS",
+          "Vue",
           "Vue Router",
           "Vuex",
           "Axios",
@@ -146,10 +155,9 @@ export default new Vuex.Store({
         languages: [
           "Bulma",
           "Javascript",
-          "VueJS",
+          "Vue",
           "Vue Router",
           "Vuex",
-          "Vue CLI",
           "Axios",
           "NPM",
           "API Gateway",

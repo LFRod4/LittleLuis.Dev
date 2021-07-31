@@ -4,7 +4,9 @@
       <nav class="navbar nav-bar-container">
         <div class="container">
           <div class="navbar-brand">
-            <h3 class="name">Luis Rodriguez</h3>
+            <h3 class="name">
+              <router-link to="/">Luis Rodriguez</router-link>
+            </h3>
             <span class="navbar-burger burger" data-target="navbarMenuHeroA">
               <span></span>
               <span></span>
@@ -14,7 +16,11 @@
           <div id="navbarMenuHeroA" class="navbar-menu">
             <div class="navbar-end">
               <span class="navbar-item">
-                <a class="button is-primary" href="https://github.com/LFRod4" target="_blank">
+                <a
+                  class="button is-primary"
+                  href="https://github.com/LFRod4"
+                  target="_blank"
+                >
                   <span class="icon has-text-black">
                     <i class="fab fa-github"></i>
                   </span>
@@ -32,11 +38,6 @@
               <router-link to="/">Home</router-link>
             </li>
             <li>
-              <a
-                href="http://frontend-20200527233516-hostingbucket-env.s3-website-us-west-2.amazonaws.com/"
-              >Live Demo</a>
-            </li>
-            <li>
               <a href="https://github.com/LFRod4/bradynce-crm">Code</a>
             </li>
           </ul>
@@ -47,9 +48,9 @@
       <div class="columns">
         <div class="card-content">
           <div class="column is-8 is-offset-2 content article-body summary">
-            <h2
-              class="blog-title has-text-black-ter"
-            >Building a CRM with a Vue frontend and a serverless backend</h2>
+            <h2 class="blog-title has-text-black-ter">
+              Building a CRM with a Vue frontend and a serverless backend
+            </h2>
             <p>
               Sometimes developers build something for the sake of learning a
               new language and other times we start with a solution to a
@@ -86,7 +87,9 @@
                     <div class="media-content has-text-centered">
                       <p class="title article-title">Serverless CRM</p>
                       <div class="tags has-addons level-item">
-                        <span class="tag is-rounded is-primary">LittleLuis</span>
+                        <span class="tag is-rounded is-primary"
+                          >LittleLuis</span
+                        >
                         <span class="tag is-rounded">May 10, 2020</span>
                       </div>
                     </div>
@@ -98,14 +101,10 @@
                       I'm using everything
                       <span class="tag">Vue</span> has to offer to manage the
                       frontend of this project, which includes
-                      <span
-                        class="tag"
-                      >Vuex</span> and
+                      <span class="tag">Vuex</span> and
                       <span class="tag">Vue Router</span>. Before I started this
                       project I knew I wanted to build an API using
-                      <span
-                        class="tag"
-                      >AWS Lambda</span>
+                      <span class="tag">AWS Lambda</span>
                       and
                       <span class="tag">AWS API Gateway</span>
                       along with
@@ -113,9 +112,7 @@
                       for a database. The great thing about AWS is how seamless
                       it is to get things started directly form the command
                       line. Lastly I used
-                      <span
-                        class="tag"
-                      >Amazon Cognito</span>
+                      <span class="tag">Amazon Cognito</span>
                       for user pools.
                     </p>
                     <!-- Heading 3 Getting Started -->
@@ -140,9 +137,7 @@
                       over again with every view/page. You can see how this
                       could be an even bigger problem on a larger application
                       with performance. As a result I decided to create a
-                      <span
-                        class="tag"
-                      >Pre-Dashboard</span>
+                      <span class="tag">Pre-Dashboard</span>
                       layout and then a
                       <span class="tag">Dashboard-Layout</span>
                       where now I can use a
@@ -150,7 +145,8 @@
                         <a
                           href="https://vuejs.org/v2/guide/components-slots.html"
                           target="_blank"
-                        >Slot</a>
+                          >Slot</a
+                        >
                       </span>
                       element to display the proper content and not have to
                       re-render the layout.
@@ -164,9 +160,7 @@
                       then you will need to create and destroy the layout
                       everytime you load a new page. The better solution is to
                       declare the layout using the
-                      <span
-                        class="tag"
-                      >Meta</span> object in Vue Router. Now
+                      <span class="tag">Meta</span> object in Vue Router. Now
                       from here since most of my pages/views are using the
                       <i>Dashboard Layout</i> I have it set so it looks at the
                       meta object in Vue Router to determine if it needs to use
@@ -177,35 +171,43 @@
                       <div class="column">
                         <div class="box">
                           <h4 class="title img-title">App.vue HTML</h4>
-                          <img class="image" src="@/assets/images/blog/apphtml.png" />
+                          <img
+                            class="image"
+                            src="@/assets/images/blog/apphtml.png"
+                          />
                         </div>
                       </div>
                       <div class="column">
                         <div class="box">
                           <h4 class="title img-title">App.vue Computed</h4>
-                          <img class="image" src="@/assets/images/blog/appjs.png" />
+                          <img
+                            class="image"
+                            src="@/assets/images/blog/appjs.png"
+                          />
                         </div>
                       </div>
                     </div>
                     <div class="box">
                       <h4 class="title img-title">Vue Router</h4>
-                      <img class="image" src="@/assets/images/blog/routerjs.png" />
+                      <img
+                        class="image"
+                        src="@/assets/images/blog/routerjs.png"
+                      />
                       <h4 class="title img-title">Dashboard Layout</h4>
-                      <img class="image" src="@/assets/images/blog/layout.png" />
+                      <img
+                        class="image"
+                        src="@/assets/images/blog/layout.png"
+                      />
                     </div>
                     <!-- Heading Setting Up Backend -->
                     <h2 class="title">Setting Up AWS</h2>
                     <p>
                       My Vue frontend will be hosted in an S3 bucket and contain
                       all of the static files. I need to create an API for the
-                      <span
-                        class="tag"
-                      >CRUD</span> functionality and set up a
+                      <span class="tag">CRUD</span> functionality and set up a
                       database to store things in. First things first, I
                       installed the
-                      <span
-                        class="tag"
-                      >serverless</span>
+                      <span class="tag">serverless</span>
                       dependency as a global package. After this it's just a
                       matter of making sure you have your AWS credentials set up
                       properly. I used an AWS-Nodejs template to have a starting
@@ -225,9 +227,7 @@
                     <p>
                       Schema for a lead is set up so on to creating the lambda
                       functions. After installing serverless there is a
-                      <span
-                        class="tag"
-                      >serverless.yml</span> file created where
+                      <span class="tag">serverless.yml</span> file created where
                       all of my functions will live in. There is alot of
                       properties you can set up here like permissions but I've
                       kept it clean and simple here with the handler and events
@@ -237,10 +237,10 @@
                     <p>
                       After setting up all the functions in the serverless file
                       then we need to create the actual CRUD logic in the
-                      <span
-                        class="tag"
-                      >Handler.js</span> file. I've set
-                      <span class="tag">context.callbackWaitsForEmptyEventLoop</span>
+                      <span class="tag">Handler.js</span> file. I've set
+                      <span class="tag"
+                        >context.callbackWaitsForEmptyEventLoop</span
+                      >
                       to false because it is set to true by defualt. The context
                       object contains information about the lambda function
                       invoked. By changing it to false it freezes the lambda
@@ -251,13 +251,19 @@
                       <div class="column">
                         <div class="box">
                           <h4 class="title img-title">Models</h4>
-                          <img class="image" src="@/assets/images/blog/lead.png" />
+                          <img
+                            class="image"
+                            src="@/assets/images/blog/lead.png"
+                          />
                         </div>
                       </div>
                       <div class="column">
                         <div class="box">
                           <h4 class="title img-title">Handlers</h4>
-                          <img class="image" src="@/assets/images/blog/handler.png" />
+                          <img
+                            class="image"
+                            src="@/assets/images/blog/handler.png"
+                          />
                         </div>
                       </div>
                     </div>
@@ -266,7 +272,10 @@
                         <div class="column">
                           <div class="box">
                             <h4 class="title img-title">Serverless.yml</h4>
-                            <img class="image" src="@/assets/images/blog/serverless.png" />
+                            <img
+                              class="image"
+                              src="@/assets/images/blog/serverless.png"
+                            />
                           </div>
                         </div>
                       </div>

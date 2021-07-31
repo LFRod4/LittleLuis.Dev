@@ -19,8 +19,8 @@
       </div>
       <div class="hero-body">
         <div class="container">
-          <h1 class="title has-text-centered has-text-white">
-            Fullstack Developer
+          <h1 class="title has-text-centered has-text-white is-size-2">
+            🧙🏼‍♂️ Wizard Engineer & Coffee Expert ☕️
           </h1>
           <button class="button tour-btn is-primary" @click="langModal = true">
             See Code Meant For You
@@ -29,12 +29,20 @@
             <div class="modal-background"></div>
             <div class="modal-content">
               <div class="box">
-                <div class="title">Choose Your Cup of Tea</div>
+                <div class="title">Find project with which language?</div>
                 <div class="buttons-container">
                   <button
                     class="button lang-btn"
                     v-scroll-to="`#projects`"
-                    @click="langChoice('vue')"
+                    @click="langChoice('React')"
+                  >
+                    React
+                  </button>
+                  <br />
+                  <button
+                    class="button lang-btn"
+                    v-scroll-to="`#projects`"
+                    @click="langChoice('Vue')"
                   >
                     Vue
                   </button>
@@ -42,7 +50,7 @@
                   <button
                     class="button lang-btn"
                     v-scroll-to="`#projects`"
-                    @click="langChoice('angular')"
+                    @click="langChoice('Angular')"
                   >
                     Angular
                   </button>
@@ -50,7 +58,7 @@
                   <button
                     class="button lang-btn"
                     v-scroll-to="`#projects`"
-                    @click="langChoice('django')"
+                    @click="langChoice('Django')"
                   >
                     Django
                   </button>
@@ -58,20 +66,18 @@
                   <button
                     class="button lang-btn"
                     v-scroll-to="`#projects`"
-                    @click="langChoice('node')"
+                    @click="langChoice('Node')"
                   >
-                    Node JS
+                    Node
                   </button>
                   <br />
                   <button
                     class="button lang-btn"
                     v-scroll-to="`#projects`"
-                    @click="langChoice('aws')"
+                    @click="langChoice('AWS')"
                   >
                     AWS Serverless App
                   </button>
-                  <br />
-                  <button class="button lang-btn" disabled>React</button>
                 </div>
               </div>
             </div>
@@ -91,14 +97,29 @@
         <section id="projects" class="section">
           <div class="container">
             <h1 class="title">Projects</h1>
+            <div v-if="lang" class="content">
+              <p className="is-justify-content-left sub-title">
+                <span class=" is-size-5 has-text-weight-bold"
+                  >Recomended Projects To View:
+                </span>
+                <span v-for="(project, index) in highlightProjects" :key="index"
+                  >{{ project
+                  }}<span
+                    v-if="index !== 0 || index !== highlightProjects.length - 1"
+                    >,
+                  </span>
+                </span>
+              </p>
+            </div>
             <div class="tile is-ancestor">
               <div class="tile is-parent">
                 <Cards
                   v-if="showProjects[0]"
                   class="cards-component"
                   :class="{
-                    'card-highlight':
-                      activeTitle == showProjects[0]['frontTitle'],
+                    'card-highlight': this.highlightProjects.includes(
+                      showProjects[0]['frontTitle']
+                    ),
                   }"
                   :project="showProjects[0]"
                 ></Cards>
@@ -108,8 +129,9 @@
                   v-if="showProjects[1]"
                   class="cards-component"
                   :class="{
-                    'card-highlight':
-                      activeTitle == showProjects[1]['frontTitle'],
+                    'card-highlight': this.highlightProjects.includes(
+                      showProjects[1]['frontTitle']
+                    ),
                   }"
                   :project="showProjects[1]"
                 ></Cards>
@@ -119,8 +141,9 @@
                   v-if="showProjects[2]"
                   class="cards-component"
                   :class="{
-                    'card-highlight':
-                      activeTitle == showProjects[2]['frontTitle'],
+                    'card-highlight': this.highlightProjects.includes(
+                      showProjects[2]['frontTitle']
+                    ),
                   }"
                   :project="showProjects[2]"
                 ></Cards>
@@ -128,6 +151,21 @@
             </div>
             <Pagination></Pagination>
           </div>
+          <br />
+          <p class="">
+            Check out my
+            <span class="has-text-weight-bold has-text-primary"
+              >web-scrpaing</span
+            >
+            project:
+            <span
+              ><a
+                target="_blank"
+                href="https://github.com/LFRod4/instaprove-react"
+                >Instaprove</a
+              ></span
+            >
+          </p>
         </section>
         <section id="aboutMe" class="section">
           <div class="container">
@@ -151,13 +189,12 @@
         <div class="line"></div>
       </div>
     </div>
-    <!-- Hero footer: will stick at the bottom -->
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import { AmplifyEventBus } from "aws-amplify-vue";
+// import { AmplifyEventBus } from "aws-amplify-vue";
 import { Auth } from "aws-amplify";
 import axios from "axios";
 import { mapState } from "vuex";
@@ -191,19 +228,8 @@ export default {
       lang: "",
       activeTitle: "",
       langModal: false,
+      highlightProjects: [],
     };
-  },
-  created() {
-    this.findUser();
-
-    AmplifyEventBus.$on("authState", (info) => {
-      if (info === "signedIn") {
-        this.findUser();
-        this.$store.commit("checkSignedIn", true);
-      } else {
-        this.$store.commit("checkSignedIn", false);
-      }
-    });
   },
   methods: {
     toggleShow() {
@@ -228,13 +254,14 @@ export default {
     langChoice(lang) {
       this.lang = lang;
       this.langModal = false;
-      if (lang == "angular") {
-        this.activeTitle = "Angular Quiz";
-      } else if (lang == "vue" || lang == "node" || lang == "aws") {
-        this.activeTitle = "CRM Serverless";
-      } else if (lang == "django") {
-        this.activeTitle = "Twitter Demo";
-      }
+
+      this.projects.forEach((project) => {
+        let currStack = project.languages;
+
+        if (currStack.includes(lang)) {
+          this.highlightProjects.push(project.frontTitle);
+        }
+      });
     },
   },
   computed: {
@@ -275,6 +302,9 @@ export default {
 </script>
 
 <style>
+nav {
+  margin-top: 20px;
+}
 .tour-btn {
   border-radius: 5px;
   font-weight: bold;
@@ -386,6 +416,10 @@ export default {
   margin-right: 5vw;
   margin-left: 5vw;
   padding: 0px 10px;
+}
+
+.hero-body {
+  padding-top: 0 !important;
 }
 
 .code-image {

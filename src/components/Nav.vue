@@ -4,7 +4,7 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <h3 class="subtitle has-text-white is-size-5">Luis Rodriguez</h3>
+            <h3 class="subtitle has-text-white is-size-3">Luis Rodriguez</h3>
           </a>
           <span
             class="navbar-burger burger has-text-white"
@@ -26,38 +26,29 @@
         >
           <div class="navbar-end">
             <a
-              class="navbar-item is-size-5 has-text-white top-nav"
+              class="navbar-item is-size-4 has-text-white top-nav"
               v-scroll-to="`#projects`"
               >Projects</a
             >
-            <a
-              class="navbar-item is-size-5 has-text-white top-nav"
-              v-scroll-to="`#aboutMe`"
-              >About Me</a
-            >
             <router-link
-              class="navbar-item is-size-5 has-text-white top-nav"
+              class="navbar-item is-size-4 has-text-white top-nav"
               to="/blog"
               >Blog</router-link
             >
             <a
-              v-if="signedIn"
-              class="navbar-item is-size-5 has-text-primary top-nav"
-              @click="securedPage()"
-              >Private</a
+              class="navbar-item is-size-2 has-text-white top-nav"
+              target="_blank"
+              href="https://www.linkedin.com/in/luisfrodriguez4/"
             >
+              <i class="fab fa-linkedin"></i
+            ></a>
             <a
-              v-if="!signedIn"
-              class="navbar-item is-size-5 has-text-white top-nav"
-              @click="activeModal(true)"
-              >Log In</a
+              class="navbar-item is-size-2 has-text-white top-nav"
+              target="_blank"
+              href="https://github.com/LFRod4"
             >
-            <a
-              v-if="signedIn"
-              @click="signOut()"
-              class="navbar-item is-size-5 has-text-white top-nav"
-              >Sign Out</a
-            >
+              <i class="fab fa-github-square"></i
+            ></a>
           </div>
         </div>
       </div>
