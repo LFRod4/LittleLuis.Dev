@@ -8,7 +8,6 @@
               class="has-text-weight-bold is-size-4 has-text-danger"
               href="./assets/LuisRodriguezResume.pdf"
               target="_blank"
-              download
               >Download Resume</a
             >
           </li>
