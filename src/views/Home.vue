@@ -20,7 +20,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title has-text-centered has-text-white is-size-2">
-            🧙🏼‍♂️ Wizard Engineer & Coffee Expert ☕️
+            🧙🏼‍♂️ Wizard Engineer | Coffee Expert ☕️
           </h1>
           <button class="button tour-btn is-primary" @click="langModal = true">
             See Code Meant For You
@@ -189,7 +189,7 @@
         <div class="line"></div>
       </div>
     </div>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 

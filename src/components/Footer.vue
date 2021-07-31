@@ -6,9 +6,9 @@
           <li>
             <a
               class="has-text-weight-bold is-size-4 has-text-danger"
-              href="<%= BASE_URL %>LuisRodriguezResume.pdf"
-              download
-              >Download Resume</a
+              href="`${publicPath}LuisRodriguezResume.pdf`"
+            >
+              Download Resume</a
             >
           </li>
         </ul>
@@ -20,6 +20,11 @@
 <script>
 export default {
   name: "Footer",
+  data() {
+    return {
+      publicPath: process.env.BASE_URL,
+    };
+  },
   methods: {
     securedPage() {
       this.$router.push("private");
