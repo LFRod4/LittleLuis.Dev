@@ -7,9 +7,9 @@
             <a
               class="has-text-weight-bold is-size-4 has-text-danger"
               href="./assets/LuisRodriguezResume.pdf"
-              download
               target="_blank"
-              >View Resume</a
+              download
+              >Download Resume</a
             >
           </li>
         </ul>
