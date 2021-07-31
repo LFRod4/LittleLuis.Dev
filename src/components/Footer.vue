@@ -6,7 +6,8 @@
           <li>
             <a
               class="has-text-weight-bold is-size-4 has-text-danger"
-              href="/LuisRodriguezResume.pdf"
+              href="./assets/LuisRodriguezResume.pdf"
+              download
               target="_blank"
               >View Resume</a
             >
