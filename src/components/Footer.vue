@@ -6,7 +6,7 @@
           <li>
             <a
               class="has-text-weight-bold is-size-4 has-text-danger"
-              :href="`${publicPath}LuisRodriguezResume.pdf`"
+              href="<%= BASE_URL %>LuisRodriguezResume.pdf"
               download
               >Download Resume</a
             >
@@ -20,7 +20,6 @@
 <script>
 export default {
   name: "Footer",
-  data: () => ({ publicPath: process.env.BASE_URL }),
   methods: {
     securedPage() {
       this.$router.push("private");
