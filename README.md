@@ -1,42 +1,6 @@
 # little-luis
 
-https://littleluis.dev/  
-Login:  
-Username: welcome1  
-Password: welcome1
+Check out my current favorite project and my first use of web scraping: Instaprove: https://github.com/LFRod4/instaprove-react
 
-Web portfolio built with Vue, Vuex, Vue Router along with multiple Amazon services.
+My portfolio shows some other projects I've built as well!
 
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Run your tests
-
-```
-npm run test
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
