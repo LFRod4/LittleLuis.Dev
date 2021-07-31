@@ -107,23 +107,6 @@ export default new Vuex.Store({
         ],
       },
       {
-        frontTitle: "REST API With Node",
-        image: require("./assets/images/node-api.png"),
-        frontContent:
-          "I used this small project to learn how to get around the basics of creating a REST API. Currently working on building the client side of this project.",
-        gitURL: "https://github.com/LFRod4/node-shop",
-        languages: [
-          "Node",
-          "Mongoosedb Atlas",
-          "Express",
-          "Body Parser",
-          "Morgan",
-          "Multer",
-          "Json Web Token",
-          "BCrypt",
-        ],
-      },
-      {
         frontTitle: "PPC Tool",
         image: require("./assets/images/ppctool.png"),
         frontContent:

@@ -154,7 +154,7 @@
           <br />
           <p class="">
             Check out my
-            <span class="has-text-weight-bold has-text-primary"
+            <span class="has-text-weight-bold has-text-danger"
               >web-scrpaing</span
             >
             project:
