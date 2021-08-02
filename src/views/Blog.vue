@@ -86,12 +86,6 @@
                   <div class="media">
                     <div class="media-content has-text-centered">
                       <p class="title article-title">Serverless CRM</p>
-                      <div class="tags has-addons level-item">
-                        <span class="tag is-rounded is-primary"
-                          >LittleLuis</span
-                        >
-                        <span class="tag is-rounded">May 10, 2020</span>
-                      </div>
                     </div>
                   </div>
                   <div class="content article-body">
